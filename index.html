@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#090b14">
+  <title>NPL Gaming Center</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="splash">
+    <div class="logo">NPL</div>
+    <div class="splash-title">NPL GAMING CENTER</div>
+    <div class="loader"></div>
+  </div>
+
+  <header class="topbar">
+    <div>
+      <div class="brand">NPL <span>GAMING CENTER</span></div>
+      <div id="userLine" class="muted">Not signed in</div>
+    </div>
+    <button id="settingsBtn" class="iconbtn">⚙</button>
+  </header>
+
+  <main>
+    <section id="auth" class="screen">
+      <div class="hero-card">
+        <div class="eyebrow">FREE FIRE • NEPAL</div>
+        <h1>Welcome Back</h1>
+        <p>Sign in to manage your points, tournaments and matches.</p>
+      </div>
+
+      <div class="card">
+        <input id="email" type="email" placeholder="Email">
+        <input id="password" type="password" placeholder="Password">
+        <button id="loginBtn" class="primary">Login</button>
+        <button id="signupBtn" class="secondary">Create account</button>
+        <button id="googleBtn" class="secondary">Continue with Google</button>
+        <div class="otp-row">
+          <input id="phone" type="tel" placeholder="+97798XXXXXXXX">
+          <button id="otpBtn" class="secondary">Phone OTP</button>
+        </div>
+        <p id="authMsg" class="muted"></p>
+      </div>
+    </section>
+
+    <section id="home" class="screen hidden">
+      <div class="wallet-card">
+        <div>
+          <div class="muted">POINTS BALANCE</div>
+          <div id="points" class="points">0</div>
+        </div>
+        <button id="buyPointsBtn" class="small">Purchase</button>
+      </div>
+
+      <div class="section-head">
+        <h2>Tournaments</h2>
+        <button id="refreshBtn" class="small">Refresh</button>
+      </div>
+      <div id="tournaments" class="grid"></div>
+
+      <div class="card">
+        <h3>Create Tournament</h3>
+        <div class="two">
+          <input id="tName" placeholder="Tournament name">
+          <select id="tMode">
+            <option>Battle Royale</option>
+            <option>Clash Squad</option>
+            <option>Lone Wolf</option>
+            <option>TDM</option>
+            <option>Custom Room</option>
+          </select>
+        </div>
+        <div class="two">
+          <input id="tEntry" type="number" min="0" placeholder="Entry points">
+          <input id="tPrize" type="number" min="0" placeholder="Prize points">
+        </div>
+        <input id="tSlots" type="number" min="2" placeholder="Slots">
+        <button id="createBtn" class="primary">Create Tournament</button>
+        <p id="createMsg" class="muted"></p>
+      </div>
+
+      <div class="card">
+        <h3>AI Assistant</h3>
+        <div id="chat" class="chat"></div>
+        <div class="chat-row">
+          <input id="chatInput" placeholder="Ask in Hindi or English...">
+          <button id="chatSend" class="primary">Send</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>eSewa Points Purchase</h3>
+        <p class="muted">QR display only. Points are not credited from a screenshot/QR scan automatically.</p>
+        <img src="../assets/esewa-qr.jpg" class="qr" alt="eSewa QR">
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom">
+    <button class="active">Home</button>
+    <button id="tournamentsNav">Tournament</button>
+    <button id="walletNav">Wallet</button>
+    <button id="profileNav">Profile</button>
+  </nav>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+                                                                       </html>
