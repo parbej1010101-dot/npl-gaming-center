@@ -1,0 +1,10 @@
+{
+  "name": "npl-gaming-center-phase1",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "python -m http.server 8080 --directory public",
+    "start": "python -m http.server 8080 --directory public"
+  }
+}
